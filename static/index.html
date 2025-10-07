@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>📚 Dissertation Q&A</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="header-title">📚 Dissertation Q&A</div>
+        <button class="new-chat-btn" onclick="createNewChat()">+ New Chat</button>
+      </div>
+      <div id="chatList" class="chat-list"></div>
+    </div>
+
+    <div class="main">
+      <div class="chat-box" id="chatBox">
+        <div class="chat-bottom-spacer"></div>
+      </div>
+      
+      <div class="input-container">
+        <div class="input-wrapper">
+          <textarea id="question" rows="1" placeholder="Ask any question..."
+            onkeydown="handleKey(event)" 
+            oninput="toggleArrow(); autoResize();"></textarea>
+          <button id="sendArrow" onclick="submitQuestion()">↑</button>
+        </div>
+      </div>
+
+      <!-- ⚠️ Warning footer like ChatGPT -->
+      <div class="footer-warning">
+        This model can make mistakes. Check important info.
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

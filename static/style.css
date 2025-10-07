@@ -1,0 +1,306 @@
+body {
+  background-color: #1e1e1e;
+  color: #f3f3f3;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: #121212;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #333;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+
+.header-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f3f3f3;
+}
+
+.new-chat-btn {
+  background-color: transparent;
+  border: 1px solid #444;
+  color: white;
+  font-size: 1rem;
+  padding: 0.6em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.new-chat-btn:hover {
+  background-color: #2f2f2f;
+}
+
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* --- Chat Entry Wrapper --- */
+.chat-title-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.chat-title-wrapper:hover {
+  background-color: #2a2a2a;
+}
+
+/* --- Chat Button --- */
+.chat-button {
+  flex: 1;
+  padding: 0.6em 0.8em;
+  background: none;
+  border: none;
+  color: #eee;
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.chat-button:hover {
+  background: none;
+}
+
+/* --- Three Dots Menu Button --- */
+.menu-btn {
+  color: #aaa;
+  cursor: pointer;
+  padding: 0.4em 0.6em;
+  font-size: 1.2rem;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.menu-btn:hover {
+  color: white;
+}
+
+/* --- Menu Dropdown --- */
+.chat-menu {
+  position: absolute;
+  right: 0.5em;
+  top: 2.5em;
+  background: #2a2a2a;
+  border: 1px solid #444;
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.chat-menu-item {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #eee;
+  white-space: nowrap;
+}
+
+.chat-menu-item:hover {
+  background: #444;
+}
+
+.chat-menu-item.delete {
+  color: #ff6b6b;
+}
+
+.chat-menu-item.delete:hover {
+  background: #442222;
+}
+
+/* --- Rename Input --- */
+.chat-title-input {
+  width: 100%;
+  padding: 0.6em 1em;
+  background-color: #2f2f2f;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  background-color: #1b1b1b;
+}
+
+.exchange {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.bubble {
+  border-radius: 12px;
+  padding: 1em;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  max-width: 85%;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: #2f2f2f;
+  color: #ffffff;
+}
+
+.bot {
+  align-self: flex-start;
+  background-color: #3c3c3c;
+  color: #ffffff;
+}
+
+.input-container {
+  padding: 1em;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+  box-shadow: 0 -10px 15px rgba(0, 0, 0, 0.5);
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: flex-end;
+  background-color: #2f2f2f;
+  border-radius: 999px;
+  padding: 0.75em 1.2em;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  font-family: inherit;
+  overflow: hidden;
+  min-height: 24px;
+  line-height: 1.4;
+}
+
+#sendArrow {
+  background-color: white;
+  color: black; /* arrow colour */
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 900;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.6em;
+  line-height: 1;
+  padding-bottom: 2px;
+  transition: background-color 0.2s ease;
+}
+
+#sendArrow:hover {
+  background-color: #e5e5e5;
+}
+
+/* cancel mode – black circle with white square */
+/* force cancel state to render as black circle with white square */
+#sendArrow.cancel {
+  background-color: black !important;
+  border-radius: 50%;
+  position: relative;
+  color: transparent !important;
+}
+
+#sendArrow.cancel::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: white;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+#sendArrow.cancel:hover {
+  background-color: #e5e5e5; /* keep hover the same */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.footer-warning {
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 0.75rem;
+  padding: 0.75em 0;
+  background-color: #1e1e1e;
+  border-top: 1px solid #333;
+}
+
+button.cancel {
+  background: black !important;
+  position: relative;
+}
+
+button.cancel::after {
+  content: "■";                /* literal square glyph */
+  color: white;                /* white square */
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
