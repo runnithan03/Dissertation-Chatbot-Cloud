@@ -1,0 +1,38 @@
+# 🔒 Secrets
+.env
+
+# 🧹 Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# 🧠 Model/data artifacts
+*.pkl
+*.npy
+*.bin
+*.pt
+*.h5
+*.ckpt
+
+# 🔍 FAISS index
+*.index
+*.idx
+
+# 📦 Output folders
+outputs/
+cache/
+logs/
+
+# ⚙️ VSCode settings (optional)
+.vscode/
+
+# 🐳 Docker ignore (optional cache)
+*.log
+
+# 🧪 Jupyter (if used)
+.ipynb_checkpoints/
+
+# 💻 OS-specific (Windows/macOS)
+.DS_Store
+Thumbs.db

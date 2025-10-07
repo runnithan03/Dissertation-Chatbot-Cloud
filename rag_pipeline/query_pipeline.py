@@ -1,7 +1,7 @@
 import pickle
 import faiss
 import numpy as np
-import ollama
+import os
 from pathlib import Path
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer
