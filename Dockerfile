@@ -24,7 +24,7 @@ RUN pip install --no-cache-dir --upgrade pip \
 COPY . .
 
 # --- Expose Render port ---
-EXPOSE 10000
+EXPOSE 8000
 
 # --- Launch FastAPI app ---
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "10000"]
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
